@@ -111,19 +111,19 @@ public class Main {
 
 
     public static void main(String[] args) {
-        /*
-            String word_1 = "Let me do it really quick";
-            String word_2 = "This is example of a problem";
-            System.out.println(letters(word_1)); //should return word "really"
-            System.out.println(letters(word_2)); //should return word "example"
-         */
 
-//        int[] tab1 = {27, 1, 1};    int[] tab2 = {30, 1, 1};
-//        System.out.println(fibbo(tab1));
-//        System.out.println(fibbo(tab2));
+        String word_1 = "Let me do it really quick";
+        String word_2 = "This is example of a problem";
+        System.out.println(letters(word_1)); //should return word "really"
+        System.out.println(letters(word_2)); //should return word "example"
 
-//        System.out.println(AInput("bar"));  //should return 5
-//        System.out.println(AInput("enter")); //should return 12
+
+        int[] tab1 = {27, 1, 1};    int[] tab2 = {30, 1, 1};
+        System.out.println(fibbo(tab1));
+        System.out.println(fibbo(tab2));
+
+        System.out.println(AInput("bar"));  //should return 5
+        System.out.println(AInput("enter")); //should return 12
 
 
         LinuxAccessAlgorithm LinuxAlgotithmObject = new LinuxAccessAlgorithm();

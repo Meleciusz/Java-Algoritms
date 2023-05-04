@@ -4,6 +4,38 @@ import java.util.*;
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
 
+    //Write function, which will check if given number is the exact
+    //times in array, for example [2, 2, 3, 3, 3, 5] is correct and will return
+    //3, but [5, 5, 2, 4] is not correct, because 5 is 2 times in list
+    public static int solution(List<Integer> A) {
+        int max = 0;
+        List<Integer> times = new ArrayList<>();
+
+        for (int j = 0; j < A.size(); ++j) {
+            for (int i = 0; i < A.size(); ++i) {
+                if (A.get(j).equals(A.get(i)))
+                    max++;
+            }
+            times.add(max);
+            max = 0;
+        }
+
+        int k = 0;
+        for (int x : times)
+        {
+            if (A.get(k).equals(times.get(k)) || times.get(k) == 1)
+                ;
+            else {
+                return 0;
+            }
+            ++k;
+        }
+
+        Collections.sort(times);
+
+        return times.get(times.size()-1);
+    }
+
     //Write function, which will check the nearest way to fibonacci number
     //For example number 15 is closest to 13 fibonacci number and 20 is closest to 21 fibonacci number
     //If the number is from fibonacci sequence return 0
@@ -127,10 +159,15 @@ public class Main {
 //        LinuxAccessAlgorithm LinuxAlgotithmObject = new LinuxAccessAlgorithm();
 //        LinuxAlgotithmObject.main();
 
-        FindSimilarStrings similar = new FindSimilarStrings();
-        List<String> words = Arrays.asList("aaaabbb", "bababab", "abddd", "cccddd", "aaaaaaaaabbb", "cd");
+//        FindSimilarStrings similar = new FindSimilarStrings();
+//        List<String> words = Arrays.asList("aaaabbb", "bababab", "abddd", "cccddd", "aaaaaaaaabbb", "cd");
+//
+//        System.out.println("There are: " + similar.maxSimilarWords(words) + " similar words in Array!");
+//        List<Integer> occurs_list = new ArrayList<>(Arrays.asList(3, 2, 8, 3, 3, 2, 7)); //should return 3
+//        System.out.println(solution(occurs_list));
 
-        System.out.println("There are: " + similar.maxSimilarWords(words) + " similar words in Array!");
+        Letters letters = new Letters();
+        System.out.println(letters.solution(4, 3, 4)); //should return aabaabccbcc
     }
 
 
